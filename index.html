@@ -1,0 +1,28 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<title>Car Sim – Milestone 1</title>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+<style>
+html,body{margin:0;height:100%;overflow:hidden;background:#111;font-family:system-ui,sans-serif;color:#fff;touch-action:none;user-select:none;-webkit-user-select:none}
+canvas{display:block}
+#hud{position:fixed;top:env(safe-area-inset-top,0);left:0;right:0;padding:10px 14px;display:flex;justify-content:space-between;pointer-events:none;text-shadow:0 1px 3px #000}
+#spd{font-size:44px;font-weight:700;line-height:1}#spd small{font-size:14px;font-weight:400}
+#gear{font-size:28px;font-weight:700;text-align:right}
+#rpmw{width:140px;height:6px;background:#0006;margin-top:6px}#rpm{height:100%;width:0;background:#4cf}
+#name{font-size:12px;opacity:.8;margin-top:4px}
+.b{position:fixed;bottom:calc(18px + env(safe-area-inset-bottom,0));width:74px;height:74px;border-radius:50%;background:#ffffff26;border:2px solid #fff6;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600}
+.b.on{background:#ffffff66}
+#left{left:14px}#right{left:98px}#gas{right:14px;width:84px;height:110px;border-radius:20px;background:#3c6a}
+#brake{right:108px;width:74px;height:90px;border-radius:20px;background:#c336}
+#hand{right:14px;bottom:calc(140px + env(safe-area-inset-bottom,0));width:60px;height:60px}
+.s{position:fixed;top:calc(80px + env(safe-area-inset-top,0));right:12px;width:56px;height:34px;border-radius:8px;font-size:12px;margin-bottom:6px}
+#cam{top:calc(80px + env(safe-area-inset-top,0))}#car{top:calc(122px + env(safe-area-inset-top,0))}#gfx{top:calc(164px + env(safe-area-inset-top,0))}
+#help{position:fixed;left:14px;bottom:110px;font-size:11px;opacity:.6;pointer-events:none}
+@media (pointer:coarse){#help{display:none}}
+</style></head><body>
+<div id="hud"><div><div id="spd">0<small> km/h</small></div><div id="rpmw"><div id="rpm"></div></div><div id="name"></div></div><div id="gear">D1</div></div>
+<div class="b" id="left" data-a="left">◀</div><div class="b" id="right" data-a="right">▶</div>
+<div class="b" id="brake" data-a="brake">BRAKE</div><div class="b" id="gas" data-a="gas">GAS</div><div class="b" id="hand" data-a="hand">HB</div>
+<button class="b s" id="cam">Cam</button><button class="b s" id="car">Car</button><button class="b s" id="gfx">Gfx</button>
+<div id="help">W/S gas·brake/reverse · A/D steer · Space handbrake · C camera · 1/2/3 car · G graphics · R reset</div>
+<script type="module" src="src/main.js"></script></body></html>
