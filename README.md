@@ -4,7 +4,7 @@ Three.js game, no build step. Plays on Android Chrome and desktop.
 ## Run via GitHub Pages
 1. Create a repo, upload all these files (keep the `src/` folder and `.nojekyll`).
 2. Settings → Pages → Deploy from branch → `main` / root.
-3. Open `https://Kelvo618.github.io/Car-Sim on your phone.
+3. Open `https://Kelvo618.github.io/Car-Sim
 Local test: `python3 -m http.server` then open localhost:8000 (ES modules need http, not file://).
 
 ## Controls
